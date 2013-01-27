@@ -1,5 +1,5 @@
 //
-//  MenuFactory.h
+//  SOParser.h
 //  Overflow
 //
 //  Created by Dmitry Kurilo on 1/28/13.
@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MenuFactory : NSObject
+@protocol APIParserProtocol <NSObject>
 
-+ (NSMenuItem*)createMenuItemWithName:(NSString*)name;
-+ (NSMenuItem*)createStatusItem;
-+ (NSMenu*)createMenu;
+@required
++(NSArray*)parseTags:(NSDictionary*)tagsObject
 
 @end

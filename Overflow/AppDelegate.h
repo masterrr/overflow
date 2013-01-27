@@ -11,7 +11,7 @@
 #import "DKTags.h"
 #import "TagsProtocol.h"
 #import "MenuFactory.h"
-
+#import "MenuActions.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
