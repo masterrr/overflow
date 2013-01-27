@@ -27,6 +27,7 @@
 		AFE7697D16B5D03500680BD4 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE7696E16B5D03500680BD4 /* SBJsonTokeniser.m */; };
 		AFE7697E16B5D03500680BD4 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE7697016B5D03500680BD4 /* SBJsonUTF8Stream.m */; };
 		AFE7697F16B5D03500680BD4 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE7697216B5D03500680BD4 /* SBJsonWriter.m */; };
+		AFE7698216B5D59C00680BD4 /* MenuFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE7698116B5D59C00680BD4 /* MenuFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,8 @@
 		AFE7697016B5D03500680BD4 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		AFE7697116B5D03500680BD4 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		AFE7697216B5D03500680BD4 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		AFE7698016B5D59C00680BD4 /* MenuFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuFactory.h; sourceTree = "<group>"; };
+		AFE7698116B5D59C00680BD4 /* MenuFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				AFE7695716B5D03500680BD4 /* SBSJson */,
 				AF77433B16B5B4D40038374C /* AppDelegate.h */,
 				AF77433C16B5B4D40038374C /* AppDelegate.m */,
+				AFE7698016B5D59C00680BD4 /* MenuFactory.h */,
+				AFE7698116B5D59C00680BD4 /* MenuFactory.m */,
 				AF11D67316B5BFE6006F2540 /* TagsProtocol.h */,
 				AF11D67416B5C03E006F2540 /* DKTags.h */,
 				AF11D67516B5C03E006F2540 /* DKTags.m */,
@@ -264,6 +269,7 @@
 				AFE7697D16B5D03500680BD4 /* SBJsonTokeniser.m in Sources */,
 				AFE7697E16B5D03500680BD4 /* SBJsonUTF8Stream.m in Sources */,
 				AFE7697F16B5D03500680BD4 /* SBJsonWriter.m in Sources */,
+				AFE7698216B5D59C00680BD4 /* MenuFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

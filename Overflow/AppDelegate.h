@@ -10,11 +10,12 @@
 
 #import "DKTags.h"
 #import "TagsProtocol.h"
-
+#import "MenuFactory.h"
 
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (strong) NSMenuItem *menu;
 
 @end

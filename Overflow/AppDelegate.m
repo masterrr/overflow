@@ -13,6 +13,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     id<TagsProtocol> tags = [[DKTags alloc] init];
     NSLog(@"%@", [tags getTags]);
+    _menu = [MenuFactory createStatusItem];
 
 }
 
