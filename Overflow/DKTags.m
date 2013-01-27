@@ -31,4 +31,14 @@ const NSString *tagsApiUrl = @"https://api.stackexchange.com/2.0/tags?site=stack
     return dict;
 }
 
+-(NSArray*)getTagsNames {
+    NSMutableArray *arr = [[NSMutableArray alloc] init];
+    NSDictionary *dict = [self getTags];
+    for (id obj in dict) {
+        NSString *op = [obj objectForKey:@"name"];
+        [arr addObject:op];
+    }
+    return arr;
+}
+
 @end

@@ -21,7 +21,6 @@
 
 + (NSMenu*)createMenu {
     NSMenu *menu = [[NSMenu alloc] initWithTitle:@"yup"];
-    [menu addItem:[self createMenuItemWithName:@"Overflow"]];
     return menu;
 }
 

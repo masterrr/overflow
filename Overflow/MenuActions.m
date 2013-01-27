@@ -8,6 +8,7 @@
 
 #import "MenuActions.h"
 #import "MenuFactory.h"
+#import "DKTags.h"
 
 @implementation MenuActions
 
@@ -50,8 +51,18 @@
 }
 
 -(void)loadTags {
-    NSMenuItem *ojb2 = [self prepareMenu:@"Overflow"];
-   
+    id<TagsProtocol> tags = [[DKTags alloc] init];
+    NSArray *names = [tags getTagsNames];
+    NSLog(@"%@", names);
+    NSMenuItem *tagsmenu = [self prepareMenu:@"Tags"];
+    NSMenu *submenu = [MenuFactory createMenu];
+    for (id obj in names) {
+        NSLog(@"%@", obj);
+        [submenu addItem:[MenuFactory createMenuItemWithName:obj]];
+    }
+    
+    [tagsmenu setSubmenu:submenu];
+
     
 }
 

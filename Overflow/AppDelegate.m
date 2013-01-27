@@ -11,14 +11,10 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    id<TagsProtocol> tags = [[DKTags alloc] init];
-    
+    _menu = [MenuFactory createStatusItem];
     id<MenuActionsProtocol> menuActions = [[MenuActions alloc] initWithMenu:_menu];
-
     [menuActions loadTags];
     
-    NSLog(@"%@", [tags getTags]);
-    _menu = [MenuFactory createStatusItem];
 }
 
 @end
