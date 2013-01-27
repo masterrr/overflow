@@ -7,13 +7,15 @@
 //
 
 #import "DKTags.h"
-#import "SBJson.h"
+
 
 const NSString *tagsApiUrl = @"https://api.stackexchange.com/2.0/tags?site=stackoverflow";
 
 @implementation DKTags
 
--(NSArray*)getTags {
+-(NSDictionary*)getTags {
+    NSMutableDictionary *dict;
+    
     NSURL           *url        = [NSURL URLWithString:(NSString*)tagsApiUrl];
     NSURLRequest    *request    = [NSURLRequest requestWithURL:url];
     NSURLResponse   *response   = nil;
@@ -24,8 +26,9 @@ const NSString *tagsApiUrl = @"https://api.stackexchange.com/2.0/tags?site=stack
         // TODO Error
     } else {
         NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"%@", [dataString JSONValue]);
+        dict = [dataString JSONValue][@"items"];
     }
+    return dict;
 }
 
 @end

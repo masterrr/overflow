@@ -7,7 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "SBJson.h"
+
+#import "DKTags.h"
+#import "TagsProtocol.h"
+
+
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 

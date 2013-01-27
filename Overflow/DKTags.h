@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "TagsProtocol.h"
 
+#import "SBJson.h"
+
 @interface DKTags : NSObject <TagsProtocol> {
     
 }
