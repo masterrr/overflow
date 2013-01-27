@@ -14,8 +14,7 @@
     id<TagsProtocol> tags = [[DKTags alloc] init];
     
     id<MenuActionsProtocol> menuActions = [[MenuActions alloc] initWithMenu:_menu];
-    
-    
+
     [menuActions loadTags];
     
     NSLog(@"%@", [tags getTags]);

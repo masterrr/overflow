@@ -11,5 +11,6 @@
 @protocol TagsProtocol <NSObject>
 
 @required
-    - (NSArray*)getTags;
+    - (NSDictionary*)getTags;
+    - (NSArray*)getTagsNames;
 @end
