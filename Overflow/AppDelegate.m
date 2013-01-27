@@ -6,19 +6,15 @@
 //  Copyright (c) 2013 Kurilo Dmitry. All rights reserved.
 //
 
-#import "AppDelegate.h"
+
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
-    NSLog(@"test");
-    NSTimer *myTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
-                                                        target:self
-                                                      selector:@selector(application:openFile:)
-                                                      userInfo:nil
-                                                       repeats:YES];
+    id<TagsProtocol> tags = [[DKTags alloc] init];
+    [tags getTags];
+
 }
 
 @end

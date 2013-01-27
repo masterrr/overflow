@@ -17,6 +17,7 @@
 		AF11D66C16B5B8E6006F2540 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11D66016B5B8E6006F2540 /* SBJsonStreamWriterAccumulator.m */; };
 		AF11D66D16B5B8E6006F2540 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11D66216B5B8E6006F2540 /* SBJsonStreamWriterState.m */; };
 		AF11D66E16B5B8E6006F2540 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11D66416B5B8E6006F2540 /* SBJsonWriter.m */; };
+		AF11D67616B5C03E006F2540 /* DKTags.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11D67516B5C03E006F2540 /* DKTags.m */; };
 		AF77432A16B5B4D40038374C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF77432916B5B4D40038374C /* Cocoa.framework */; };
 		AF77433416B5B4D40038374C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF77433216B5B4D40038374C /* InfoPlist.strings */; };
 		AF77433616B5B4D40038374C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF77433516B5B4D40038374C /* main.m */; };
@@ -47,6 +48,9 @@
 		AF11D66216B5B8E6006F2540 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
 		AF11D66316B5B8E6006F2540 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		AF11D66416B5B8E6006F2540 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		AF11D67316B5BFE6006F2540 /* TagsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TagsProtocol.h; path = Overflow/TagsProtocol.h; sourceTree = SOURCE_ROOT; };
+		AF11D67416B5C03E006F2540 /* DKTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKTags.h; sourceTree = "<group>"; };
+		AF11D67516B5C03E006F2540 /* DKTags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKTags.m; sourceTree = "<group>"; };
 		AF77432516B5B4D40038374C /* Overflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Overflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF77432916B5B4D40038374C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AF77432C16B5B4D40038374C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -144,6 +148,9 @@
 				AF11D64F16B5B8CB006F2540 /* SBSJson */,
 				AF77433B16B5B4D40038374C /* AppDelegate.h */,
 				AF77433C16B5B4D40038374C /* AppDelegate.m */,
+				AF11D67316B5BFE6006F2540 /* TagsProtocol.h */,
+				AF11D67416B5C03E006F2540 /* DKTags.h */,
+				AF11D67516B5C03E006F2540 /* DKTags.m */,
 				AF77433E16B5B4D40038374C /* MainMenu.xib */,
 				AF77433016B5B4D40038374C /* Supporting Files */,
 			);
@@ -238,6 +245,7 @@
 				AF11D66C16B5B8E6006F2540 /* SBJsonStreamWriterAccumulator.m in Sources */,
 				AF11D66D16B5B8E6006F2540 /* SBJsonStreamWriterState.m in Sources */,
 				AF11D66E16B5B8E6006F2540 /* SBJsonWriter.m in Sources */,
+				AF11D67616B5C03E006F2540 /* DKTags.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
