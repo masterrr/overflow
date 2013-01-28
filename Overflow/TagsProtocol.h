@@ -13,4 +13,5 @@
 @required
     - (NSDictionary*)getTags;
     - (NSArray*)getTagsNames;
+    - (NSArray*)getPrettyTagsNames;
 @end

@@ -15,6 +15,7 @@
 		AF77433A16B5B4D40038374C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = AF77433816B5B4D40038374C /* Credits.rtf */; };
 		AF77433D16B5B4D40038374C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF77433C16B5B4D40038374C /* AppDelegate.m */; };
 		AF77434016B5B4D40038374C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF77433E16B5B4D40038374C /* MainMenu.xib */; };
+		AF77930616B6AD5E00EAD1A3 /* DKActions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF77930516B6AD5E00EAD1A3 /* DKActions.m */; };
 		AFE7697316B5D03500680BD4 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE7695916B5D03500680BD4 /* NSObject+SBJson.m */; };
 		AFE7697416B5D03500680BD4 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE7695C16B5D03500680BD4 /* SBJsonParser.m */; };
 		AFE7697516B5D03500680BD4 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE7695E16B5D03500680BD4 /* SBJsonStreamParser.m */; };
@@ -52,6 +53,9 @@
 		AF77433B16B5B4D40038374C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF77433C16B5B4D40038374C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AF77433F16B5B4D40038374C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		AF77930416B6AD5E00EAD1A3 /* DKActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKActions.h; sourceTree = "<group>"; };
+		AF77930516B6AD5E00EAD1A3 /* DKActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKActions.m; sourceTree = "<group>"; };
+		AF77930816B6AD7500EAD1A3 /* DKActionsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKActionsProtocol.h; sourceTree = "<group>"; };
 		AFE7695816B5D03500680BD4 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		AFE7695916B5D03500680BD4 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		AFE7695A16B5D03500680BD4 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -140,6 +144,9 @@
 				AF0F7FF516B5E5E500FF6165 /* MenuActionsProtocol.h */,
 				AF0F7FF116B5E34400FF6165 /* MenuActions.h */,
 				AF0F7FF216B5E34400FF6165 /* MenuActions.m */,
+				AF77930816B6AD7500EAD1A3 /* DKActionsProtocol.h */,
+				AF77930416B6AD5E00EAD1A3 /* DKActions.h */,
+				AF77930516B6AD5E00EAD1A3 /* DKActions.m */,
 				AF6F8BC316B6898400FF87A5 /* MenuFactoryProtocol.h */,
 				AFE7698016B5D59C00680BD4 /* MenuFactory.h */,
 				AFE7698116B5D59C00680BD4 /* MenuFactory.m */,
@@ -280,6 +287,7 @@
 				AFE7697F16B5D03500680BD4 /* SBJsonWriter.m in Sources */,
 				AFE7698216B5D59C00680BD4 /* MenuFactory.m in Sources */,
 				AF0F7FF316B5E34400FF6165 /* MenuActions.m in Sources */,
+				AF77930616B6AD5E00EAD1A3 /* DKActions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

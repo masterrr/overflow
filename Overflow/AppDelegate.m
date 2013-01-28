@@ -14,7 +14,6 @@
     _menu = [MenuFactory createStatusItem];
     id<MenuActionsProtocol> menuActions = [[MenuActions alloc] initWithMenu:_menu];
     [menuActions loadTags];
-    
-}
+};
 
 @end

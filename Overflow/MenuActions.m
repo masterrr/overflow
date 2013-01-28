@@ -52,14 +52,14 @@
 
 -(void)loadTags {
     id<TagsProtocol> tags = [[DKTags alloc] init];
-    NSArray *names = [tags getTagsNames];
+    NSArray *names = [tags getPrettyTagsNames];
     NSMenuItem *tagsmenu = [self prepareMenu:@"Tags"];
     NSMenu *submenu = [MenuFactory createMenu];
     [tagsmenu setSubmenu:submenu];
     for (id obj in names) {
         NSLog(@"%@", obj);
         [submenu addItem:[MenuFactory createMenuItemWithName:obj]];
-    }
+    } 
 }
 
 @end
