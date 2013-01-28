@@ -15,12 +15,12 @@
     NSStatusItem *theItem = [bar statusItemWithLength:NSVariableStatusItemLength];
     [theItem setEnabled:YES];
     [theItem setMenu:[self createMenu]];
-    [theItem setTitle: @"test"];
+    [theItem setTitle: @"OF"];
     return (NSMenuItem*)theItem;
 }
 
 + (NSMenu*)createMenu {
-    NSMenu *menu = [[NSMenu alloc] initWithTitle:@"yup"];
+    NSMenu *menu = [[NSMenu alloc] init];
     return menu;
 }
 

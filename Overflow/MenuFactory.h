@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MenuFactoryProtocol.h"
 
-@interface MenuFactory : NSObject
 
-+ (NSMenuItem*)createMenuItemWithName:(NSString*)name;
-+ (NSMenuItem*)createStatusItem;
-+ (NSMenu*)createMenu;
+@interface MenuFactory : NSObject <MenuFactoryProtocol>
+
 
 @end

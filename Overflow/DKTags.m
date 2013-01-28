@@ -28,6 +28,7 @@ const NSString *tagsApiUrl = @"https://api.stackexchange.com/2.0/tags?site=stack
         NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         dict = [dataString JSONValue][@"items"];
     }
+    NSLog(@"%@", dict);
     return dict;
 }
 
