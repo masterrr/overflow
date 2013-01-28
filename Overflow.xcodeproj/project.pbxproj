@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		AF0F7FF316B5E34400FF6165 /* MenuActions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0F7FF216B5E34400FF6165 /* MenuActions.m */; };
 		AF11D67616B5C03E006F2540 /* DKTags.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11D67516B5C03E006F2540 /* DKTags.m */; };
+		AF5E531316B6FBC700FDAC01 /* PXSourceList-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF5E530E16B6FBC700FDAC01 /* PXSourceList-Info.plist */; };
+		AF5E531416B6FBC700FDAC01 /* PXSourceList.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5E531016B6FBC700FDAC01 /* PXSourceList.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF5E531B16B7003C00FDAC01 /* MainWindowListController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5E531A16B7003C00FDAC01 /* MainWindowListController.m */; };
 		AF77432A16B5B4D40038374C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF77432916B5B4D40038374C /* Cocoa.framework */; };
 		AF77433416B5B4D40038374C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF77433216B5B4D40038374C /* InfoPlist.strings */; };
 		AF77433616B5B4D40038374C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF77433516B5B4D40038374C /* main.m */; };
@@ -38,6 +41,13 @@
 		AF11D67316B5BFE6006F2540 /* TagsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TagsProtocol.h; path = Overflow/TagsProtocol.h; sourceTree = SOURCE_ROOT; };
 		AF11D67416B5C03E006F2540 /* DKTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKTags.h; sourceTree = "<group>"; };
 		AF11D67516B5C03E006F2540 /* DKTags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKTags.m; sourceTree = "<group>"; };
+		AF5E530E16B6FBC700FDAC01 /* PXSourceList-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PXSourceList-Info.plist"; sourceTree = "<group>"; };
+		AF5E530F16B6FBC700FDAC01 /* PXSourceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSourceList.h; sourceTree = "<group>"; };
+		AF5E531016B6FBC700FDAC01 /* PXSourceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXSourceList.m; sourceTree = "<group>"; };
+		AF5E531116B6FBC700FDAC01 /* PXSourceListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSourceListDataSource.h; sourceTree = "<group>"; };
+		AF5E531216B6FBC700FDAC01 /* PXSourceListDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSourceListDelegate.h; sourceTree = "<group>"; };
+		AF5E531916B7003C00FDAC01 /* MainWindowListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowListController.h; sourceTree = "<group>"; };
+		AF5E531A16B7003C00FDAC01 /* MainWindowListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowListController.m; sourceTree = "<group>"; };
 		AF6F8BC316B6898400FF87A5 /* MenuFactoryProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuFactoryProtocol.h; sourceTree = "<group>"; };
 		AF77432516B5B4D40038374C /* Overflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Overflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF77432916B5B4D40038374C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -95,6 +105,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF5E530C16B6FBAF00FDAC01 /* PXSourceList */ = {
+			isa = PBXGroup;
+			children = (
+				AF5E530E16B6FBC700FDAC01 /* PXSourceList-Info.plist */,
+				AF5E530F16B6FBC700FDAC01 /* PXSourceList.h */,
+				AF5E531016B6FBC700FDAC01 /* PXSourceList.m */,
+				AF5E531116B6FBC700FDAC01 /* PXSourceListDataSource.h */,
+				AF5E531216B6FBC700FDAC01 /* PXSourceListDelegate.h */,
+			);
+			name = PXSourceList;
+			sourceTree = "<group>";
+		};
 		AF77431A16B5B4D40038374C = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +156,7 @@
 		AF77432F16B5B4D40038374C /* Overflow */ = {
 			isa = PBXGroup;
 			children = (
+				AF5E530C16B6FBAF00FDAC01 /* PXSourceList */,
 				AFE7695716B5D03500680BD4 /* SBSJson */,
 				AF77433B16B5B4D40038374C /* AppDelegate.h */,
 				AF77433C16B5B4D40038374C /* AppDelegate.m */,
@@ -147,6 +170,8 @@
 				AF11D67416B5C03E006F2540 /* DKTags.h */,
 				AF11D67516B5C03E006F2540 /* DKTags.m */,
 				AF77433E16B5B4D40038374C /* MainMenu.xib */,
+				AF5E531916B7003C00FDAC01 /* MainWindowListController.h */,
+				AF5E531A16B7003C00FDAC01 /* MainWindowListController.m */,
 				AF77433016B5B4D40038374C /* Supporting Files */,
 			);
 			path = Overflow;
@@ -252,6 +277,7 @@
 				AF77433416B5B4D40038374C /* InfoPlist.strings in Resources */,
 				AF77433A16B5B4D40038374C /* Credits.rtf in Resources */,
 				AF77434016B5B4D40038374C /* MainMenu.xib in Resources */,
+				AF5E531316B6FBC700FDAC01 /* PXSourceList-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +306,8 @@
 				AFE7697F16B5D03500680BD4 /* SBJsonWriter.m in Sources */,
 				AFE7698216B5D59C00680BD4 /* MenuFactory.m in Sources */,
 				AF0F7FF316B5E34400FF6165 /* MenuActions.m in Sources */,
+				AF5E531416B6FBC700FDAC01 /* PXSourceList.m in Sources */,
+				AF5E531B16B7003C00FDAC01 /* MainWindowListController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

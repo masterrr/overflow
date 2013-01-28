@@ -7,15 +7,17 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "PXSourceList.h"
 #import "DKTags.h"
 #import "TagsProtocol.h"
 #import "MenuFactory.h"
 #import "MenuActions.h"
+#import "MainWindowListController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 @property (strong) NSMenuItem *menu;
+@property (strong) IBOutlet PXSourceList *leftList;
 
 @end
