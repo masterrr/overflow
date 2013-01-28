@@ -19,6 +19,7 @@
         [item setRepresentedObject:self];
         [item setTarget:self];
         [item setAction:@selector(quickAsk)];
+        [[dmenu menu] addItem:[NSMenuItem separatorItem]];
     }
     return self;
 }
@@ -66,8 +67,16 @@
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:openUrl]];
 }
 
+-(void)changeTagMenuItemState:(NSMenuItem*)sender {
+    if ([sender state] == NO) {
+        [sender setState:YES];
+    } else {
+        [sender setState:NO];
+    }
+}
+
 -(void)loadTags {
-    NSMenuItem *tagsmenu = [self prepareMenu:@"Tags"];
+    NSMenuItem *tagsmenu = [self prepareMenu:@"Tags Notifications"];
     id<TagsProtocol> tags = [[DKTags alloc] init];
     NSDictionary *tags_node = [tags getTags];
     NSMenu *submenu = [MenuFactory createMenu];
@@ -83,7 +92,8 @@
         [menuitem setAttributedTitle:string];
         [menuitem setRepresentedObject:self];
         [menuitem setTarget:self];
-        [menuitem setAction:@selector(openTagsPage:)];
+        [menuitem setState:NO];
+        [menuitem setAction:@selector(changeTagMenuItemState:)];
         [submenu addItem:menuitem];
 
     }    
