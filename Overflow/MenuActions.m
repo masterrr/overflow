@@ -9,6 +9,7 @@
 #import "MenuActions.h"
 #import "MenuFactory.h"
 #import "DKTags.h"
+#import "DKActions.h"
 
 @implementation MenuActions
 
@@ -50,16 +51,26 @@
     return item;
 }
 
+-(void)openTagsPage {
+    NSLog(@"calling");
+    id<DKActionsProtocol> actions = [[DKActions alloc] init];
+    [actions openTagPagelWithName:@"obj-c"];
+}
+
 -(void)loadTags {
+    NSMenuItem *tagsmenu = [self prepareMenu:@"Tags"];
     id<TagsProtocol> tags = [[DKTags alloc] init];
     NSArray *names = [tags getPrettyTagsNames];
-    NSMenuItem *tagsmenu = [self prepareMenu:@"Tags"];
     NSMenu *submenu = [MenuFactory createMenu];
     [tagsmenu setSubmenu:submenu];
     for (id obj in names) {
-        NSLog(@"%@", obj);
-        [submenu addItem:[MenuFactory createMenuItemWithName:obj]];
-    } 
+        NSMenuItem *menuitem = [MenuFactory createMenuItemWithName:obj];
+        [menuitem setRepresentedObject:self];
+        [menuitem setTarget:self];
+        [menuitem setAction:@selector(openTagsPage)];
+        [submenu addItem:menuitem];
+
+    }    
 }
 
 @end

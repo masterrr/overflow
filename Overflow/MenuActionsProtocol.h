@@ -11,6 +11,7 @@
 @protocol MenuActionsProtocol <NSObject>
 
 @required
+-(void)openTagsPage;
 -(void)loadTags;
 
 @end

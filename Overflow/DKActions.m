@@ -8,6 +8,15 @@
 
 #import "DKActions.h"
 
+NSString *tagUrl = @"http://stackoverflow.com/questions/tagged/";
+
 @implementation DKActions
+
+-(void)openTagPagelWithName:(NSString*)string {
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", tagUrl, string]]];
+}
+-(void)ping {
+    NSLog(@"ping");
+}
 
 @end

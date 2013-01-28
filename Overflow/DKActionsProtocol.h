@@ -10,4 +10,7 @@
 
 @protocol DKActionsProtocol <NSObject>
 
+@required
+-(void)openTagPagelWithName:(NSString*)string;
+-(void)ping;
 @end

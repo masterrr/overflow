@@ -13,6 +13,7 @@
     NSMenuItem *dmenu;
 }
 
+
 -(id)initWithMenu:(NSMenuItem*)menu;
 
 

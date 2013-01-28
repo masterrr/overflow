@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DKActionsProtocol.h"
 
-@interface DKActions : NSObject
+@interface DKActions : NSObject <DKActionsProtocol>
 
 @end
