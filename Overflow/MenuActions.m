@@ -82,7 +82,6 @@
     NSMenu *submenu = [MenuFactory createMenu];
     [tagsmenu setSubmenu:submenu];
     for (id obj in tags_node) {
-        NSLog(@"%@", obj);
         NSMutableAttributedString * string = [[NSMutableAttributedString alloc] initWithString:[obj objectForKey:@"name"]];
         NSString * countraw = [[NSString alloc] initWithFormat:@" (%@)", [obj objectForKey:@"count"]];
         NSMutableAttributedString * count = [[NSMutableAttributedString alloc] initWithString:countraw];

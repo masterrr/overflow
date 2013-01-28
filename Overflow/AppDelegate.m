@@ -15,9 +15,10 @@
     id<MenuActionsProtocol> menuActions = [[MenuActions alloc] initWithMenu:_menu];
     [menuActions loadTags];
     
-    MainWindowListController *listController = [[MainWindowListController alloc] init];
+   /* MainWindowListController *listController = [[MainWindowListController alloc] init];
     [_leftList setDelegate:listController];
     [_leftList setDataSource:listController];
+    [_leftList reloadData];*/
 
 };
 
