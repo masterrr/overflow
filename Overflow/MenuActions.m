@@ -9,15 +9,22 @@
 #import "MenuActions.h"
 #import "MenuFactory.h"
 #import "DKTags.h"
-#import "DKActions.h"
 
 @implementation MenuActions
 
 -(id)initWithMenu:(NSMenuItem*)menu {
     if (self = [super init]) {
         dmenu = menu;
+        NSMenuItem *item = [self prepareMenu:@"Ask Question"];
+        [item setRepresentedObject:self];
+        [item setTarget:self];
+        [item setAction:@selector(quickAsk)];
     }
     return self;
+}
+
+-(void)quickAsk {
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://stackoverflow.com/questions/ask"]];
 }
 
 -(BOOL)checkIfMenuExists:(NSString*)str {
@@ -52,8 +59,11 @@
 }
 
 -(void)openTagsPage:(NSMenuItem*)sender {
-    id<DKActionsProtocol> actions = [[DKActions alloc] init];
-    [actions openTagPagelWithName:sender.title];
+    NSString *tagname = [sender title];
+    NSArray *arr = [tagname componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    tagname = [arr objectAtIndex:0];
+    NSString *openUrl = [[NSString alloc] initWithFormat:@"%@%@", @"http://stackoverflow.com/questions/tagged/", tagname];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:openUrl]];
 }
 
 -(void)loadTags {

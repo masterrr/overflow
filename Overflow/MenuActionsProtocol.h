@@ -11,7 +11,8 @@
 @protocol MenuActionsProtocol <NSObject>
 
 @required
--(void)openTagsPage;
+-(void)openTagsPage:(NSMenuItem*)sender;
+-(void)quickAsk;
 -(void)loadTags;
 
 @end
