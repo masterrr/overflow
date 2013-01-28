@@ -51,23 +51,29 @@
     return item;
 }
 
--(void)openTagsPage {
-    NSLog(@"calling");
+-(void)openTagsPage:(NSMenuItem*)sender {
     id<DKActionsProtocol> actions = [[DKActions alloc] init];
-    [actions openTagPagelWithName:@"obj-c"];
+    [actions openTagPagelWithName:sender.title];
 }
 
 -(void)loadTags {
     NSMenuItem *tagsmenu = [self prepareMenu:@"Tags"];
     id<TagsProtocol> tags = [[DKTags alloc] init];
-    NSArray *names = [tags getPrettyTagsNames];
+    NSDictionary *tags_node = [tags getTags];
     NSMenu *submenu = [MenuFactory createMenu];
     [tagsmenu setSubmenu:submenu];
-    for (id obj in names) {
-        NSMenuItem *menuitem = [MenuFactory createMenuItemWithName:obj];
+    for (id obj in tags_node) {
+        NSLog(@"%@", obj);
+        NSMutableAttributedString * string = [[NSMutableAttributedString alloc] initWithString:[obj objectForKey:@"name"]];
+        NSString * countraw = [[NSString alloc] initWithFormat:@" (%@)", [obj objectForKey:@"count"]];
+        NSMutableAttributedString * count = [[NSMutableAttributedString alloc] initWithString:countraw];
+        [count addAttribute:NSForegroundColorAttributeName value:[NSColor grayColor] range:NSMakeRange(0, [count length])];
+        [string appendAttributedString:count];
+        NSMenuItem *menuitem = [MenuFactory createMenuItemWithName:@""];
+        [menuitem setAttributedTitle:string];
         [menuitem setRepresentedObject:self];
         [menuitem setTarget:self];
-        [menuitem setAction:@selector(openTagsPage)];
+        [menuitem setAction:@selector(openTagsPage:)];
         [submenu addItem:menuitem];
 
     }    

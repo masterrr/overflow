@@ -28,7 +28,6 @@ const NSString *tagsApiUrl = @"https://api.stackexchange.com/2.0/tags?site=stack
         NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         dict = [dataString JSONValue][@"items"];
     }
-    NSLog(@"%@", dict);
     return dict;
 }
 
@@ -42,23 +41,5 @@ const NSString *tagsApiUrl = @"https://api.stackexchange.com/2.0/tags?site=stack
     return arr;
 }
 
--(NSArray*)getTagsNames {
-    NSArray *arr = [[NSArray alloc] initWithArray:[self getTagsArray]];
-    NSMutableArray *newarr = [[NSMutableArray alloc] init];
-    for (id obj in arr) {
-        [newarr addObject:(NSString*)[obj objectForKey:@"name"]];
-    }
-    return newarr;
-}
-
--(NSArray*)getPrettyTagsNames {
-    NSArray *arr = [[NSArray alloc] initWithArray:[self getTagsArray]];
-    NSMutableArray *newarr = [[NSMutableArray alloc] init];
-    for (id obj in arr) {
-        NSString *string = [NSString stringWithFormat:@"%@ | %@", [obj objectForKey:@"name"], [obj objectForKey:@"count"]];
-        [newarr addObject:string];
-    }
-    return newarr;
-}
 
 @end
