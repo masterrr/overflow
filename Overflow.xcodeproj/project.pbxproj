@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		AF0F7FF316B5E34400FF6165 /* MenuActions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0F7FF216B5E34400FF6165 /* MenuActions.m */; };
 		AF11D67616B5C03E006F2540 /* DKTags.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11D67516B5C03E006F2540 /* DKTags.m */; };
+		AF1894FC16B7D37300973DD1 /* CustomNSWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1894FB16B7D37300973DD1 /* CustomNSWindow.m */; };
+		AF1894FF16B7D58D00973DD1 /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1894FE16B7D58D00973DD1 /* INAppStoreWindow.m */; };
+		AF18950416B7D97000973DD1 /* INWindowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AF18950116B7D5C400973DD1 /* INWindowButton.m */; };
+		AF18950516B7D97200973DD1 /* NSColor+INAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF18950316B7D5C400973DD1 /* NSColor+INAdditions.m */; };
 		AF5E532116B704EA00FDAC01 /* GradientWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5E532016B704EA00FDAC01 /* GradientWindow.m */; };
 		AF5E532416B708C200FDAC01 /* GradientScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5E532316B708C200FDAC01 /* GradientScrollView.m */; };
 		AF77432A16B5B4D40038374C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF77432916B5B4D40038374C /* Cocoa.framework */; };
@@ -40,6 +44,14 @@
 		AF11D67316B5BFE6006F2540 /* TagsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TagsProtocol.h; path = Overflow/TagsProtocol.h; sourceTree = SOURCE_ROOT; };
 		AF11D67416B5C03E006F2540 /* DKTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKTags.h; sourceTree = "<group>"; };
 		AF11D67516B5C03E006F2540 /* DKTags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKTags.m; sourceTree = "<group>"; };
+		AF1894FA16B7D37300973DD1 /* CustomNSWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNSWindow.h; sourceTree = "<group>"; };
+		AF1894FB16B7D37300973DD1 /* CustomNSWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNSWindow.m; sourceTree = "<group>"; };
+		AF1894FD16B7D58D00973DD1 /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
+		AF1894FE16B7D58D00973DD1 /* INAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INAppStoreWindow.m; sourceTree = "<group>"; };
+		AF18950016B7D5C400973DD1 /* INWindowButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INWindowButton.h; sourceTree = "<group>"; };
+		AF18950116B7D5C400973DD1 /* INWindowButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INWindowButton.m; sourceTree = "<group>"; };
+		AF18950216B7D5C400973DD1 /* NSColor+INAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSColor+INAdditions.h"; sourceTree = "<group>"; };
+		AF18950316B7D5C400973DD1 /* NSColor+INAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSColor+INAdditions.m"; sourceTree = "<group>"; };
 		AF5E531F16B704EA00FDAC01 /* GradientWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GradientWindow.h; path = ../GradientWindow.h; sourceTree = "<group>"; };
 		AF5E532016B704EA00FDAC01 /* GradientWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GradientWindow.m; path = ../GradientWindow.m; sourceTree = "<group>"; };
 		AF5E532216B708C200FDAC01 /* GradientScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientScrollView.h; sourceTree = "<group>"; };
@@ -140,6 +152,14 @@
 		AF77432F16B5B4D40038374C /* Overflow */ = {
 			isa = PBXGroup;
 			children = (
+				AF1894FD16B7D58D00973DD1 /* INAppStoreWindow.h */,
+				AF1894FE16B7D58D00973DD1 /* INAppStoreWindow.m */,
+				AF18950016B7D5C400973DD1 /* INWindowButton.h */,
+				AF18950116B7D5C400973DD1 /* INWindowButton.m */,
+				AF18950216B7D5C400973DD1 /* NSColor+INAdditions.h */,
+				AF18950316B7D5C400973DD1 /* NSColor+INAdditions.m */,
+				AF1894FA16B7D37300973DD1 /* CustomNSWindow.h */,
+				AF1894FB16B7D37300973DD1 /* CustomNSWindow.m */,
 				AF5E531F16B704EA00FDAC01 /* GradientWindow.h */,
 				AF5E532016B704EA00FDAC01 /* GradientWindow.m */,
 				AF5E532216B708C200FDAC01 /* GradientScrollView.h */,
@@ -272,6 +292,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF18950516B7D97200973DD1 /* NSColor+INAdditions.m in Sources */,
+				AF18950416B7D97000973DD1 /* INWindowButton.m in Sources */,
 				AF77433616B5B4D40038374C /* main.m in Sources */,
 				AF77433D16B5B4D40038374C /* AppDelegate.m in Sources */,
 				AF11D67616B5C03E006F2540 /* DKTags.m in Sources */,
@@ -292,6 +314,8 @@
 				AF0F7FF316B5E34400FF6165 /* MenuActions.m in Sources */,
 				AF5E532116B704EA00FDAC01 /* GradientWindow.m in Sources */,
 				AF5E532416B708C200FDAC01 /* GradientScrollView.m in Sources */,
+				AF1894FC16B7D37300973DD1 /* CustomNSWindow.m in Sources */,
+				AF1894FF16B7D58D00973DD1 /* INAppStoreWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,10 +12,11 @@
 #import "MenuFactory.h"
 #import "MenuActions.h"
 #import "GradientWindow.h"
+#import "INAppStoreWindow.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet INAppStoreWindow *window;
 @property (strong) NSMenuItem *menu;
 
 @end
