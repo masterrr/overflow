@@ -11,34 +11,46 @@
 
 const NSString *tagsApiUrl = @"https://api.stackexchange.com/2.0/tags?site=stackoverflow";
 
+
+
 @implementation DKTags
 
--(NSDictionary*)getTags {
-    NSMutableDictionary *dict;
-    
-    NSURL           *url        = [NSURL URLWithString:(NSString*)tagsApiUrl];
-    NSURLRequest    *request    = [NSURLRequest requestWithURL:url];
-    NSURLResponse   *response   = nil;
-    NSError         *error      = nil;
-    NSData          *data       = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    
-    if (!data) {
-        // TODO Error
-    } else {
-        NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        dict = [dataString JSONValue][@"items"];
+-(id)initWithDelegate:(id)delegate {
+    if (self = [super init]) {
+        [self setDelegate:delegate];
     }
-    return dict;
+    return self;
 }
 
+-(void)performLoadTags {
+    [self getTags];
+}
 
--(NSArray*)getTagsArray {
-    NSMutableArray *arr = [[NSMutableArray alloc] init];
-    NSDictionary *dict = [self getTags];
-    for (id obj in dict) {
-        [arr addObject:obj];
+-(void)getTags {
+    NSURL            *url        = [NSURL URLWithString:(NSString*)tagsApiUrl];
+    NSURLRequest     *request    = [NSURLRequest requestWithURL:url];
+    NSURLResponse    *gresponse   = nil;
+    NSError          *gerror      = nil;
+    NSOperationQueue *queue      = [[NSOperationQueue alloc] init];
+    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){
+        self.gdata = data;
+        [gresponse setValue:response];
+        [gerror setValue:error];
+        [self processTags];
+    }];
+}
+
+-(void)processTags {
+    NSMutableDictionary *dict;
+    if (!_gdata) {
+        // TODO Error
+    } else {
+        NSString *dataString = [[NSString alloc] initWithData:_gdata encoding:NSUTF8StringEncoding];
+        dict = [dataString JSONValue][@"items"];
     }
-    return arr;
+    if ([_delegate respondsToSelector:@selector(takeTags:)]) {
+        [_delegate takeTags:dict];
+    }
 }
 
 

@@ -76,12 +76,15 @@
 }
 
 -(void)loadTags {
-    NSMenuItem *tagsmenu = [self prepareMenu:@"Tags Notifications"];
-    id<TagsProtocol> tags = [[DKTags alloc] init];
-    NSDictionary *tags_node = [tags getTags];
+    id<TagsProtocol> tags = [[DKTags alloc] initWithDelegate:self];
+    [tags performLoadTags];   
+}
+
+-(void)takeTags:(NSDictionary*)tags {
     NSMenu *submenu = [MenuFactory createMenu];
+    NSMenuItem *tagsmenu = [self prepareMenu:@"Tags Notifications"];
     [tagsmenu setSubmenu:submenu];
-    for (id obj in tags_node) {
+    for (id obj in tags) {
         NSMutableAttributedString * string = [[NSMutableAttributedString alloc] initWithString:[obj objectForKey:@"name"]];
         NSString * countraw = [[NSString alloc] initWithFormat:@" (%@)", [obj objectForKey:@"count"]];
         NSMutableAttributedString * count = [[NSMutableAttributedString alloc] initWithString:countraw];
@@ -94,8 +97,8 @@
         [menuitem setState:NO];
         [menuitem setAction:@selector(changeTagMenuItemState:)];
         [submenu addItem:menuitem];
+    }
 
-    }    
 }
 
 @end

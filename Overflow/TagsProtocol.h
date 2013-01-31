@@ -11,5 +11,6 @@
 @protocol TagsProtocol <NSObject>
 
 @required
-    - (NSDictionary*)getTags;
+    -(id)initWithDelegate:(id)delegate; 
+    -(void)performLoadTags;
 @end

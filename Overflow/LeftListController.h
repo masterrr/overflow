@@ -9,10 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "PXSourceList.h"
 #import "SourceListItem.h"
+#import "DKTags.h"
+#import "APITagsProtocol.h"
 
-@interface LeftListController : NSObject <PXSourceListDataSource, PXSourceListDelegate> {
+@interface LeftListController : NSObject <PXSourceListDataSource, PXSourceListDelegate, APITagsProtocol> {
     NSMutableArray *sourceListItems;
 }
 @property (strong) IBOutlet PXSourceList *leftlist;
+@property (strong) SourceListItem *tags;
+-(void)refreshTags;
 
 @end

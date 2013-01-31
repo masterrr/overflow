@@ -13,11 +13,25 @@
 -(id)init {
     if (self = [super init]) {
         sourceListItems = [[NSMutableArray alloc] init];
-        SourceListItem *libraryItem = [SourceListItem itemWithTitle:@"LIBRARY" identifier:@"library"];
-        [sourceListItems addObject:libraryItem];
-        [_leftlist reloadData];
+        _tags = [SourceListItem itemWithTitle:@"TAGS" identifier:@"tags"];
+        id<TagsProtocol> tags = [[DKTags alloc] initWithDelegate:self];
+        [tags performLoadTags];   
+        [sourceListItems addObject:_tags];
+        
     }
     return self;
+}
+
+-(void)takeTags:(NSDictionary *)tags {
+     NSMutableArray *childrenTags = [[NSMutableArray alloc] init];
+     NSImage * tag_picture = [[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"tag_image" ofType:@"png"]];
+    for (id obj in tags) {
+        SourceListItem *tagChildrenItem = [SourceListItem itemWithTitle:[obj objectForKey:@"name"] identifier:[obj objectForKey:@"name"]];
+        [tagChildrenItem setIcon:tag_picture];
+        [childrenTags addObject:tagChildrenItem];
+    }
+    [_tags setChildren:childrenTags];
+    [_leftlist reloadData];
 }
 
 
@@ -112,7 +126,7 @@
 - (void)sourceListSelectionDidChange:(NSNotification *)notification
 {
 	NSIndexSet *selectedIndexes = [_leftlist selectedRowIndexes];
-	
+    NSLog(@"%@",selectedIndexes);
 }
 
 
