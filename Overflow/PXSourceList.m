@@ -16,7 +16,7 @@
 #define BADGE_MARGIN							5.0			//The spacing between the badge and the cell for that row
 #define ROW_RIGHT_MARGIN						5.0			//The spacing between the right edge of the badge and the edge of the table column
 #define ICON_SPACING							2.0			//The spacing between the icon and it's adjacent cell
-#define DISCLOSURE_TRIANGLE_SPACE				18.0		//The indentation reserved for disclosure triangles for non-group items
+#define DISCLOSURE_TRIANGLE_SPACE				5.0		//The indentation reserved for disclosure triangles for non-group items
 
 //Drawing constants
 #define BADGE_BACKGROUND_COLOR					[NSColor colorWithCalibratedRed:(152/255.0) green:(168/255.0) blue:(202/255.0) alpha:1]

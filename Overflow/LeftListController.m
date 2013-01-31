@@ -32,6 +32,8 @@
     }
     [_tags setChildren:childrenTags];
     [_leftlist reloadData];
+    [_leftlist expandItem:_tags];
+
 }
 
 
