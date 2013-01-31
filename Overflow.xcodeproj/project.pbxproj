@@ -21,6 +21,9 @@
 		AF77433A16B5B4D40038374C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = AF77433816B5B4D40038374C /* Credits.rtf */; };
 		AF77433D16B5B4D40038374C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF77433C16B5B4D40038374C /* AppDelegate.m */; };
 		AF77434016B5B4D40038374C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF77433E16B5B4D40038374C /* MainMenu.xib */; };
+		AFC9246316BAA066005D5E92 /* PXSourceList.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC9246016BAA065005D5E92 /* PXSourceList.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFC9246616BAA1BA005D5E92 /* LeftListController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC9246516BAA1BA005D5E92 /* LeftListController.m */; };
+		AFC9246916BAA42A005D5E92 /* SourceListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC9246816BAA42A005D5E92 /* SourceListItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AFE7697316B5D03500680BD4 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE7695916B5D03500680BD4 /* NSObject+SBJson.m */; };
 		AFE7697416B5D03500680BD4 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE7695C16B5D03500680BD4 /* SBJsonParser.m */; };
 		AFE7697516B5D03500680BD4 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE7695E16B5D03500680BD4 /* SBJsonStreamParser.m */; };
@@ -70,6 +73,14 @@
 		AF77433B16B5B4D40038374C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF77433C16B5B4D40038374C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AF77433F16B5B4D40038374C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		AFC9245F16BAA065005D5E92 /* PXSourceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSourceList.h; sourceTree = "<group>"; };
+		AFC9246016BAA065005D5E92 /* PXSourceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXSourceList.m; sourceTree = "<group>"; };
+		AFC9246116BAA065005D5E92 /* PXSourceListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSourceListDataSource.h; sourceTree = "<group>"; };
+		AFC9246216BAA065005D5E92 /* PXSourceListDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSourceListDelegate.h; sourceTree = "<group>"; };
+		AFC9246416BAA1BA005D5E92 /* LeftListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftListController.h; sourceTree = "<group>"; };
+		AFC9246516BAA1BA005D5E92 /* LeftListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftListController.m; sourceTree = "<group>"; };
+		AFC9246716BAA42A005D5E92 /* SourceListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceListItem.h; sourceTree = "<group>"; };
+		AFC9246816BAA42A005D5E92 /* SourceListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceListItem.m; sourceTree = "<group>"; };
 		AFE7695816B5D03500680BD4 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		AFE7695916B5D03500680BD4 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		AFE7695A16B5D03500680BD4 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -164,6 +175,12 @@
 				AF5E532016B704EA00FDAC01 /* GradientWindow.m */,
 				AF5E532216B708C200FDAC01 /* GradientScrollView.h */,
 				AF5E532316B708C200FDAC01 /* GradientScrollView.m */,
+				AFC9245F16BAA065005D5E92 /* PXSourceList.h */,
+				AFC9246016BAA065005D5E92 /* PXSourceList.m */,
+				AFC9246716BAA42A005D5E92 /* SourceListItem.h */,
+				AFC9246816BAA42A005D5E92 /* SourceListItem.m */,
+				AFC9246116BAA065005D5E92 /* PXSourceListDataSource.h */,
+				AFC9246216BAA065005D5E92 /* PXSourceListDelegate.h */,
 				AFE7695716B5D03500680BD4 /* SBSJson */,
 				AF77433B16B5B4D40038374C /* AppDelegate.h */,
 				AF77433C16B5B4D40038374C /* AppDelegate.m */,
@@ -177,6 +194,8 @@
 				AF11D67416B5C03E006F2540 /* DKTags.h */,
 				AF11D67516B5C03E006F2540 /* DKTags.m */,
 				AF77433E16B5B4D40038374C /* MainMenu.xib */,
+				AFC9246416BAA1BA005D5E92 /* LeftListController.h */,
+				AFC9246516BAA1BA005D5E92 /* LeftListController.m */,
 				AF77433016B5B4D40038374C /* Supporting Files */,
 			);
 			path = Overflow;
@@ -316,6 +335,9 @@
 				AF5E532416B708C200FDAC01 /* GradientScrollView.m in Sources */,
 				AF1894FC16B7D37300973DD1 /* CustomNSWindow.m in Sources */,
 				AF1894FF16B7D58D00973DD1 /* INAppStoreWindow.m in Sources */,
+				AFC9246316BAA066005D5E92 /* PXSourceList.m in Sources */,
+				AFC9246616BAA1BA005D5E92 /* LeftListController.m in Sources */,
+				AFC9246916BAA42A005D5E92 /* SourceListItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

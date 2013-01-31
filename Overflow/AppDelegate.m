@@ -22,6 +22,10 @@
     [button setBezelStyle:NSShadowlessSquareBezelStyle];
     [button setTitle:@"A Button"];
     [titleBarView addSubview:button];
+    
+    
+    
+    
 };
 
 @end

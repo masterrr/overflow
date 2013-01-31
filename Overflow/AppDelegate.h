@@ -13,6 +13,8 @@
 #import "MenuActions.h"
 #import "GradientWindow.h"
 #import "INAppStoreWindow.h"
+#import "PXSourceList.h"
+#import "LeftListController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
