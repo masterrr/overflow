@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol QuestionsProtocol <NSObject>
+@protocol DKQuestionsProtocol <NSObject>
 
 @end

@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TagsProtocol.h"
+#import "DKTagsProtocol.h"
 #import "APITagsProtocol.h"
 #import "SBJson.h"
 
-@interface DKTags : NSObject <TagsProtocol>
+@interface DKTags : NSObject <DKTagsProtocol>
 
 @property (strong) NSData *gdata;
 @property id delegate;

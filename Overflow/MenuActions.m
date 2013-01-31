@@ -76,7 +76,7 @@
 }
 
 -(void)loadTags {
-    id<TagsProtocol> tags = [[DKTags alloc] initWithDelegate:self];
+    id<DKTagsProtocol> tags = [[DKTags alloc] initWithDelegate:self];
     [tags performLoadTags];   
 }
 

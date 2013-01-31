@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "DKTags.h"
-#import "TagsProtocol.h"
+#import "DKTagsProtocol.h"
 #import "MenuFactory.h"
 #import "MenuActions.h"
 #import "GradientWindow.h"

@@ -46,7 +46,7 @@
 		AF0F7FF116B5E34400FF6165 /* MenuActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuActions.h; sourceTree = "<group>"; };
 		AF0F7FF216B5E34400FF6165 /* MenuActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuActions.m; sourceTree = "<group>"; };
 		AF0F7FF516B5E5E500FF6165 /* MenuActionsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuActionsProtocol.h; sourceTree = "<group>"; };
-		AF11D67316B5BFE6006F2540 /* TagsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TagsProtocol.h; path = Overflow/TagsProtocol.h; sourceTree = SOURCE_ROOT; };
+		AF11D67316B5BFE6006F2540 /* DKTagsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DKTagsProtocol.h; path = Overflow/DKTagsProtocol.h; sourceTree = SOURCE_ROOT; };
 		AF11D67416B5C03E006F2540 /* DKTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKTags.h; sourceTree = "<group>"; };
 		AF11D67516B5C03E006F2540 /* DKTags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKTags.m; sourceTree = "<group>"; };
 		AF1894FA16B7D37300973DD1 /* CustomNSWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNSWindow.h; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		AFC9246A16BAA93F005D5E92 /* tag_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tag_image.png; sourceTree = "<group>"; };
 		AFC9246C16BAAC30005D5E92 /* DKQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKQuestions.h; sourceTree = "<group>"; };
 		AFC9246D16BAAC30005D5E92 /* DKQuestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKQuestions.m; sourceTree = "<group>"; };
-		AFC9246F16BAAC47005D5E92 /* QuestionsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionsProtocol.h; sourceTree = "<group>"; };
+		AFC9246F16BAAC47005D5E92 /* DKQuestionsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKQuestionsProtocol.h; sourceTree = "<group>"; };
 		AFC9247116BAB71D005D5E92 /* APITagsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APITagsProtocol.h; sourceTree = "<group>"; };
 		AFE7695816B5D03500680BD4 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		AFE7695916B5D03500680BD4 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 		AF77432F16B5B4D40038374C /* Overflow */ = {
 			isa = PBXGroup;
 			children = (
-				AFC9247116BAB71D005D5E92 /* APITagsProtocol.h */,
+				AFC9247216BAC088005D5E92 /* Protocols */,
 				AFC9246A16BAA93F005D5E92 /* tag_image.png */,
 				AF1894FD16B7D58D00973DD1 /* INAppStoreWindow.h */,
 				AF1894FE16B7D58D00973DD1 /* INAppStoreWindow.m */,
@@ -191,21 +191,17 @@
 				AFC9246116BAA065005D5E92 /* PXSourceListDataSource.h */,
 				AFC9246216BAA065005D5E92 /* PXSourceListDelegate.h */,
 				AFE7695716B5D03500680BD4 /* SBSJson */,
-				AF6F8BC316B6898400FF87A5 /* MenuFactoryProtocol.h */,
 				AFE7698016B5D59C00680BD4 /* MenuFactory.h */,
 				AFE7698116B5D59C00680BD4 /* MenuFactory.m */,
 				AF77433B16B5B4D40038374C /* AppDelegate.h */,
 				AF77433C16B5B4D40038374C /* AppDelegate.m */,
-				AF0F7FF516B5E5E500FF6165 /* MenuActionsProtocol.h */,
 				AF0F7FF116B5E34400FF6165 /* MenuActions.h */,
 				AF0F7FF216B5E34400FF6165 /* MenuActions.m */,
-				AF11D67316B5BFE6006F2540 /* TagsProtocol.h */,
 				AF11D67416B5C03E006F2540 /* DKTags.h */,
 				AF11D67516B5C03E006F2540 /* DKTags.m */,
 				AF77433E16B5B4D40038374C /* MainMenu.xib */,
 				AFC9246416BAA1BA005D5E92 /* LeftListController.h */,
 				AFC9246516BAA1BA005D5E92 /* LeftListController.m */,
-				AFC9246F16BAAC47005D5E92 /* QuestionsProtocol.h */,
 				AFC9246C16BAAC30005D5E92 /* DKQuestions.h */,
 				AFC9246D16BAAC30005D5E92 /* DKQuestions.m */,
 				AF77433016B5B4D40038374C /* Supporting Files */,
@@ -223,6 +219,18 @@
 				AF77433816B5B4D40038374C /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFC9247216BAC088005D5E92 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AF0F7FF516B5E5E500FF6165 /* MenuActionsProtocol.h */,
+				AF6F8BC316B6898400FF87A5 /* MenuFactoryProtocol.h */,
+				AFC9247116BAB71D005D5E92 /* APITagsProtocol.h */,
+				AF11D67316B5BFE6006F2540 /* DKTagsProtocol.h */,
+				AFC9246F16BAAC47005D5E92 /* DKQuestionsProtocol.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		AFE7695716B5D03500680BD4 /* SBSJson */ = {

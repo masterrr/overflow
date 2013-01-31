@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "QuestionsProtocol.h"
+#import "DKQuestionsProtocol.h"
 
 @interface DKQuestions : NSObject
 

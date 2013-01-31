@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol TagsProtocol <NSObject>
+@protocol DKTagsProtocol <NSObject>
 
 @required
     -(id)initWithDelegate:(id)delegate; 

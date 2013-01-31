@@ -14,7 +14,7 @@
     if (self = [super init]) {
         sourceListItems = [[NSMutableArray alloc] init];
         _tags = [SourceListItem itemWithTitle:@"TAGS" identifier:@"tags"];
-        id<TagsProtocol> tags = [[DKTags alloc] initWithDelegate:self];
+        id<DKTagsProtocol> tags = [[DKTags alloc] initWithDelegate:self];
         [tags performLoadTags];   
         [sourceListItems addObject:_tags];
         
