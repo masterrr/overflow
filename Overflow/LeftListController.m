@@ -15,7 +15,7 @@
         sourceListItems = [[NSMutableArray alloc] init];
         _tags = [SourceListItem itemWithTitle:@"TAGS" identifier:@"tags"];
         id<DKTagsProtocol> tags = [[DKTags alloc] initWithDelegate:self];
-      //  [tags performLoadTags];
+        [tags performLoadTags];
         [sourceListItems addObject:_tags];
         
     }

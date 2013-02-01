@@ -20,5 +20,6 @@
 
 @property (assign) IBOutlet INAppStoreWindow *window;
 @property (strong) NSMenuItem *menu;
+@property (strong) IBOutlet PXSourceList *leftList;
 
 @end

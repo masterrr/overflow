@@ -16,17 +16,41 @@
     //[menuActions loadTags];
     
     
-    NSImage * tagPicture = [[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"refresh" ofType:@"png"]];
-    [tagPicture setTemplate:YES];
+   
+    NSBox *verticalSeparator = [[NSBox alloc] initWithFrame: NSMakeRect(236,0,1,100)];
+    [verticalSeparator setBoxType:NSBoxCustom];
+    [verticalSeparator setBorderColor:[NSColor grayColor]];
     self.window.titleBarHeight = 60.0;
+    self.window.showsBaselineSeparator = NO;
     NSView *titleBarView = self.window.titleBarView;
-    NSSize buttonSize = NSMakeSize(100.f, 30.f);
-    NSRect buttonFrame = NSMakeRect(NSMidX(titleBarView.bounds) - (buttonSize.width / 2.f), NSMidY(titleBarView.bounds) - (buttonSize.height / 2.f)-8, buttonSize.width, buttonSize.height+20);
+    [titleBarView addSubview:verticalSeparator];
+    
+    NSTextField *title = [[NSTextField alloc] initWithFrame:NSMakeRect(100, 18, 100, 30)];
+    [title setBordered:NO];
+    [title setBezeled:NO];
+    [title setEnabled:NO];
+    [title setEditable:NO];
+    [title setFont:[NSFont fontWithName:@"Lobster" size:20]];
+    [title setDrawsBackground:NO];
+    [title setTextColor:[NSColor grayColor]];
+    [title setStringValue:@"Overflow"];
+    [titleBarView addSubview:title];
+    
+#pragma mark refreshButton
+    /*NSImage * tagPicture = [[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"refresh" ofType:@"png"]];
+     NSImage * tagPicturePressed = [[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"refresh_pressed" ofType:@"png"]];
+     [tagPicture setTemplate:YES];*/
+    /*NSSize buttonSize = NSMakeSize(30.f, 30.f);
+    NSRect buttonFrame = NSMakeRect(NSMidX(_leftList.bounds), NSMidY(titleBarView.bounds) - (buttonSize.height / 2.f), buttonSize.width, buttonSize.height);
     NSButton *button = [[NSButton alloc] initWithFrame:buttonFrame];
+    [button setButtonType:NSMomentaryChangeButton];
     [button setImage:tagPicture];
     [button setImagePosition:NSImageOnly];
     [button setBordered:NO];
-    [titleBarView addSubview:button];
+    [[button cell] setImageScaling:NSImageScaleProportionallyDown];
+    [button setAlternateImage:tagPicturePressed];
+    [titleBarView addSubview:button];*/
+    
     
     
     
