@@ -12,10 +12,12 @@
 
 -(id)init {
     if (self = [super init]) {
+        [self setIsLoading:NO];
         sourceListItems = [[NSMutableArray alloc] init];
         _tags = [SourceListItem itemWithTitle:@"TAGS" identifier:@"tags"];
         id<DKTagsProtocol> tags = [[DKTags alloc] initWithDelegate:self];
         [tags performLoadTags];
+        [self setIsLoading:YES];
         [sourceListItems addObject:_tags];
         
     }
@@ -33,7 +35,7 @@
     [_tags setChildren:childrenTags];
     [_leftlist reloadData];
     [_leftlist expandItem:_tags];
-
+    [self setIsLoading:NO];
 }
 
 

@@ -15,8 +15,6 @@
     //id<MenuActionsProtocol> menuActions = [[MenuActions alloc] initWithMenu:_menu];
     //[menuActions loadTags];
     
-    
-   
     NSBox *verticalSeparator = [[NSBox alloc] initWithFrame: NSMakeRect(236,0,1,100)];
     [verticalSeparator setBoxType:NSBoxCustom];
     [verticalSeparator setBorderColor:[NSColor grayColor]];

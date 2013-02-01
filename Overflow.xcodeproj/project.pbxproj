@@ -27,6 +27,7 @@
 		AFC9246B16BAA93F005D5E92 /* tag_image.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC9246A16BAA93F005D5E92 /* tag_image.png */; };
 		AFC9246E16BAAC30005D5E92 /* DKQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC9246D16BAAC30005D5E92 /* DKQuestions.m */; };
 		AFC9247416BAC20F005D5E92 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC9247316BAC20F005D5E92 /* refresh.png */; };
+		AFD8283916BC22CA00163B0F /* RightSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD8283816BC22CA00163B0F /* RightSectionController.m */; };
 		AFE7697316B5D03500680BD4 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE7695916B5D03500680BD4 /* NSObject+SBJson.m */; };
 		AFE7697416B5D03500680BD4 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE7695C16B5D03500680BD4 /* SBJsonParser.m */; };
 		AFE7697516B5D03500680BD4 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE7695E16B5D03500680BD4 /* SBJsonStreamParser.m */; };
@@ -90,6 +91,8 @@
 		AFC9246F16BAAC47005D5E92 /* DKQuestionsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKQuestionsProtocol.h; sourceTree = "<group>"; };
 		AFC9247116BAB71D005D5E92 /* APITagsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APITagsProtocol.h; sourceTree = "<group>"; };
 		AFC9247316BAC20F005D5E92 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		AFD8283716BC22CA00163B0F /* RightSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightSectionController.h; sourceTree = "<group>"; };
+		AFD8283816BC22CA00163B0F /* RightSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightSectionController.m; sourceTree = "<group>"; };
 		AFE7695816B5D03500680BD4 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		AFE7695916B5D03500680BD4 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		AFE7695A16B5D03500680BD4 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -204,6 +207,8 @@
 				AF77433E16B5B4D40038374C /* MainMenu.xib */,
 				AFC9246416BAA1BA005D5E92 /* LeftListController.h */,
 				AFC9246516BAA1BA005D5E92 /* LeftListController.m */,
+				AFD8283716BC22CA00163B0F /* RightSectionController.h */,
+				AFD8283816BC22CA00163B0F /* RightSectionController.m */,
 				AFC9246C16BAAC30005D5E92 /* DKQuestions.h */,
 				AFC9246D16BAAC30005D5E92 /* DKQuestions.m */,
 				AF77433016B5B4D40038374C /* Supporting Files */,
@@ -372,6 +377,7 @@
 				AFC9246616BAA1BA005D5E92 /* LeftListController.m in Sources */,
 				AFC9246916BAA42A005D5E92 /* SourceListItem.m in Sources */,
 				AFC9246E16BAAC30005D5E92 /* DKQuestions.m in Sources */,
+				AFD8283916BC22CA00163B0F /* RightSectionController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
