@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @protocol APITagsProtocol <NSObject>
-    -(void)takeTags:(NSDictionary*)tags;
+    -(void)takeTags:(NSArray*)tags;
 @end

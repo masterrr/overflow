@@ -12,7 +12,7 @@
 #import "DKTags.h"
 #import "APITagsProtocol.h"
 
-@interface LeftListController : NSObject <PXSourceListDataSource, PXSourceListDelegate, APITagsProtocol> {
+@interface LeftListController : NSObject <PXSourceListDataSource, PXSourceListDelegate, APITagsProtocol, NSApplicationDelegate> {
     NSMutableArray *sourceListItems;
 }
 @property BOOL isLoading;

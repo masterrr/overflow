@@ -10,21 +10,20 @@
 
 @implementation LeftListController
 
--(id)init {
-    if (self = [super init]) {
-        [self setIsLoading:NO];
-        sourceListItems = [[NSMutableArray alloc] init];
-        _tags = [SourceListItem itemWithTitle:@"TAGS" identifier:@"tags"];
-        id<DKTagsProtocol> tags = [[DKTags alloc] initWithDelegate:self];
-        [tags performLoadTags];
-        [self setIsLoading:YES];
-        [sourceListItems addObject:_tags];
-        
-    }
-    return self;
+-(void)awakeFromNib {
+    [self setIsLoading:NO];
+    sourceListItems = [[NSMutableArray alloc] init];
+    _tags = [SourceListItem itemWithTitle:@"TAGS" identifier:@"tags"];
+    id<DKTagsProtocol> tags = [[DKTags alloc] initWithDelegate:self];
+    [tags performLoadTags];
+    [self setIsLoading:YES];
+    [sourceListItems addObject:_tags];
 }
 
--(void)takeTags:(NSDictionary *)tags {
+-(void)takeTags:(NSArray *)tags {
+    NSLog(@"calling");
+    [self setIsLoading:NO];
+    NSLog(@"not loaind");
      NSMutableArray *childrenTags = [[NSMutableArray alloc] init];
      NSImage * tag_picture = [[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"tag_image" ofType:@"png"]];
     for (id obj in tags) {

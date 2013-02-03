@@ -23,7 +23,7 @@ const NSString *tagsApiUrl = @"https://api.stackexchange.com/2.0/tags?site=stack
 }
 
 -(void)performLoadTags {
-    [self getTags];
+    [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(getCacheTags) userInfo:nil repeats:NO];
 }
 
 -(void)getTags {
@@ -40,18 +40,35 @@ const NSString *tagsApiUrl = @"https://api.stackexchange.com/2.0/tags?site=stack
     }];
 }
 
+-(void)saveCacheTags:(NSArray*)data {
+    NSString *fileName = @"DKTagsCache.cache";
+    NSString *homeDir = NSTemporaryDirectory();
+    NSString *fullPath =[homeDir stringByAppendingPathComponent:fileName];
+    [data writeToFile:fullPath atomically:YES];
+}
+
+-(void)getCacheTags {
+    NSString *fileName = @"DKTagsCache.cache";
+    NSString *homeDir = NSTemporaryDirectory();
+    NSString *fullPath =[homeDir stringByAppendingPathComponent:fileName];
+    NSMutableArray *datas = [[NSMutableArray alloc] initWithContentsOfFile:fullPath];
+    if ([_delegate respondsToSelector:@selector(takeTags:)]) {
+        [_delegate takeTags:datas];
+    }
+}
+
 -(void)processTags {
-    NSMutableDictionary *dict;
+    NSMutableArray *arr;
     if (!_gdata) {
         // TODO Error
     } else {
         NSString *dataString = [[NSString alloc] initWithData:_gdata encoding:NSUTF8StringEncoding];
-        dict = [dataString JSONValue][@"items"];
+        arr = [dataString JSONValue][@"items"];
+        [self saveCacheTags:arr];
     }
     if ([_delegate respondsToSelector:@selector(takeTags:)]) {
-        [_delegate takeTags:dict];
+        [_delegate takeTags:arr];
     }
 }
-
 
 @end

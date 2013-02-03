@@ -1501,7 +1501,7 @@
 						</object>
 						<object class="NSProgressIndicator" id="222349595">
 							<reference key="NSNextResponder" ref="439893737"/>
-							<int key="NSvFlags">268</int>
+							<int key="NSvFlags">-2147483380</int>
 							<string key="NSFrame">{{245, 2}, {16, 16}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
@@ -1512,7 +1512,7 @@
 						</object>
 						<object class="NSScrollView" id="41650967">
 							<reference key="NSNextResponder" ref="439893737"/>
-							<int key="NSvFlags">268</int>
+							<int key="NSvFlags">-2147483380</int>
 							<array class="NSMutableArray" key="NSSubviews">
 								<object class="NSClipView" id="581165150">
 									<reference key="NSNextResponder" ref="41650967"/>
@@ -1627,7 +1627,7 @@
 							<string key="NSFrame">{{245, 26}, {520, 225}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
+							<reference key="NSNextKeyView" ref="581165150"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<int key="NSsFlags">133682</int>
 							<reference key="NSVScroller" ref="1023211523"/>
