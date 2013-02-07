@@ -13,7 +13,7 @@
 
 @interface DKTags : NSObject <DKTagsProtocol>
 
-@property (strong) NSData *gdata;
+@property (strong) NSArray *gdata;
 @property id delegate;
 -(void)processTags;
 

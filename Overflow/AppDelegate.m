@@ -33,7 +33,6 @@
     [title setTextColor:[NSColor grayColor]];
     [title setStringValue:@"Overflow"];
     [titleBarView addSubview:title];
-    
 #pragma mark refreshButton
     /*NSImage * tagPicture = [[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"refresh" ofType:@"png"]];
      NSImage * tagPicturePressed = [[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"refresh_pressed" ofType:@"png"]];

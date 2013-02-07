@@ -10,7 +10,7 @@
 
 
 const NSString *tagsApiUrl = @"https://api.stackexchange.com/2.0/tags?site=stackoverflow";
-
+const NSString *tagsCacheFileName = @"DKTagsCache.cache";
 
 
 @implementation DKTags
@@ -23,21 +23,47 @@ const NSString *tagsApiUrl = @"https://api.stackexchange.com/2.0/tags?site=stack
 }
 
 -(void)performLoadTags {
-    [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(getCacheTags) userInfo:nil repeats:NO];
+        [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(getTags) userInfo:nil repeats:NO];
+}
+
+// Check if DKTagsCache.cache exists
+-(BOOL)cacheTagsExists {
+    NSString *tempFolder = NSTemporaryDirectory();
+    NSString *path = [tempFolder stringByAppendingString:(NSString*)tagsCacheFileName];
+    return (BOOL)[[NSFileManager defaultManager] fileExistsAtPath:path];
 }
 
 -(void)getTags {
-    NSURL            *url        = [NSURL URLWithString:(NSString*)tagsApiUrl];
-    NSURLRequest     *request    = [NSURLRequest requestWithURL:url];
-    NSURLResponse    *gresponse   = nil;
-    NSError          *gerror      = nil;
-    NSOperationQueue *queue      = [[NSOperationQueue alloc] init];
-    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){
-        self.gdata = data;
-        [gresponse setValue:response];
-        [gerror setValue:error];
-        [self processTags];
-    }];
+    if ([self cacheTagsExists]) {
+        [self loadTagsFromSite:NO];
+    } else {
+        [self loadTagsFromSite:YES];
+    }
+}
+
+-(void)loadTagsFromSite:(BOOL)flag {
+    if (flag) {
+        NSURL            *url        = [NSURL URLWithString:(NSString*)tagsApiUrl];
+        NSURLRequest     *request    = [NSURLRequest requestWithURL:url];
+        NSURLResponse    *gresponse   = nil;
+        NSError          *gerror      = nil;
+        NSOperationQueue *queue      = [[NSOperationQueue alloc] init];
+        [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){
+            NSArray *arr = [data JSONValue][@"items"];
+            [self saveCacheTags:arr];
+            if ([_delegate respondsToSelector:@selector(takeTags:)]) {
+                [_delegate takeTags:arr];
+            }
+        }];
+    } else {
+        NSString *fileName = (NSString*)tagsCacheFileName;
+        NSString *homeDir = NSTemporaryDirectory();
+        NSString *fullPath =[homeDir stringByAppendingPathComponent:fileName];
+        NSMutableArray *datas = [[NSMutableArray alloc] initWithContentsOfFile:fullPath];
+        if ([_delegate respondsToSelector:@selector(takeTags:)]) {
+            [_delegate takeTags:datas];
+        }
+    }
 }
 
 -(void)saveCacheTags:(NSArray*)data {
@@ -45,30 +71,6 @@ const NSString *tagsApiUrl = @"https://api.stackexchange.com/2.0/tags?site=stack
     NSString *homeDir = NSTemporaryDirectory();
     NSString *fullPath =[homeDir stringByAppendingPathComponent:fileName];
     [data writeToFile:fullPath atomically:YES];
-}
-
--(void)getCacheTags {
-    NSString *fileName = @"DKTagsCache.cache";
-    NSString *homeDir = NSTemporaryDirectory();
-    NSString *fullPath =[homeDir stringByAppendingPathComponent:fileName];
-    NSMutableArray *datas = [[NSMutableArray alloc] initWithContentsOfFile:fullPath];
-    if ([_delegate respondsToSelector:@selector(takeTags:)]) {
-        [_delegate takeTags:datas];
-    }
-}
-
--(void)processTags {
-    NSMutableArray *arr;
-    if (!_gdata) {
-        // TODO Error
-    } else {
-        NSString *dataString = [[NSString alloc] initWithData:_gdata encoding:NSUTF8StringEncoding];
-        arr = [dataString JSONValue][@"items"];
-        [self saveCacheTags:arr];
-    }
-    if ([_delegate respondsToSelector:@selector(takeTags:)]) {
-        [_delegate takeTags:arr];
-    }
 }
 
 @end
