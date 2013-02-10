@@ -21,6 +21,9 @@
 		AF77433A16B5B4D40038374C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = AF77433816B5B4D40038374C /* Credits.rtf */; };
 		AF77433D16B5B4D40038374C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF77433C16B5B4D40038374C /* AppDelegate.m */; };
 		AF77434016B5B4D40038374C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF77433E16B5B4D40038374C /* MainMenu.xib */; };
+		AF7D713316C84260002B4919 /* EQSTRScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7D713016C8425F002B4919 /* EQSTRScrollView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF7D713416C84260002B4919 /* EQSTRClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7D713216C8425F002B4919 /* EQSTRClipView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF7D713616C842B2002B4919 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7D713516C842B2002B4919 /* QuartzCore.framework */; };
 		AFC9246316BAA066005D5E92 /* PXSourceList.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC9246016BAA065005D5E92 /* PXSourceList.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AFC9246616BAA1BA005D5E92 /* LeftListController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC9246516BAA1BA005D5E92 /* LeftListController.m */; };
 		AFC9246916BAA42A005D5E92 /* SourceListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC9246816BAA42A005D5E92 /* SourceListItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -77,6 +80,11 @@
 		AF77433B16B5B4D40038374C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF77433C16B5B4D40038374C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AF77433F16B5B4D40038374C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		AF7D712F16C8425F002B4919 /* EQSTRScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQSTRScrollView.h; sourceTree = "<group>"; };
+		AF7D713016C8425F002B4919 /* EQSTRScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQSTRScrollView.m; sourceTree = "<group>"; };
+		AF7D713116C8425F002B4919 /* EQSTRClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQSTRClipView.h; sourceTree = "<group>"; };
+		AF7D713216C8425F002B4919 /* EQSTRClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQSTRClipView.m; sourceTree = "<group>"; };
+		AF7D713516C842B2002B4919 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AFC9245F16BAA065005D5E92 /* PXSourceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSourceList.h; sourceTree = "<group>"; };
 		AFC9246016BAA065005D5E92 /* PXSourceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXSourceList.m; sourceTree = "<group>"; };
 		AFC9246116BAA065005D5E92 /* PXSourceListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSourceListDataSource.h; sourceTree = "<group>"; };
@@ -129,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF7D713616C842B2002B4919 /* QuartzCore.framework in Frameworks */,
 				AF77432A16B5B4D40038374C /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +148,7 @@
 		AF77431A16B5B4D40038374C = {
 			isa = PBXGroup;
 			children = (
+				AF7D713516C842B2002B4919 /* QuartzCore.framework */,
 				AF77432F16B5B4D40038374C /* Overflow */,
 				AF77432816B5B4D40038374C /* Frameworks */,
 				AF77432616B5B4D40038374C /* Products */,
@@ -195,6 +205,10 @@
 				AFC9246816BAA42A005D5E92 /* SourceListItem.m */,
 				AFC9246116BAA065005D5E92 /* PXSourceListDataSource.h */,
 				AFC9246216BAA065005D5E92 /* PXSourceListDelegate.h */,
+				AF7D712F16C8425F002B4919 /* EQSTRScrollView.h */,
+				AF7D713016C8425F002B4919 /* EQSTRScrollView.m */,
+				AF7D713116C8425F002B4919 /* EQSTRClipView.h */,
+				AF7D713216C8425F002B4919 /* EQSTRClipView.m */,
 				AFE7695716B5D03500680BD4 /* SBSJson */,
 				AFE7698016B5D59C00680BD4 /* MenuFactory.h */,
 				AFE7698116B5D59C00680BD4 /* MenuFactory.m */,
@@ -378,6 +392,8 @@
 				AFC9246916BAA42A005D5E92 /* SourceListItem.m in Sources */,
 				AFC9246E16BAAC30005D5E92 /* DKQuestions.m in Sources */,
 				AFD8283916BC22CA00163B0F /* RightSectionController.m in Sources */,
+				AF7D713316C84260002B4919 /* EQSTRScrollView.m in Sources */,
+				AF7D713416C84260002B4919 /* EQSTRClipView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
