@@ -10,4 +10,6 @@
 
 @interface RightSectionController : NSObject
 
+-(void)loadAnswers:(NSString*)name;
+
 @end

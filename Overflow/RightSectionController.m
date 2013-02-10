@@ -10,4 +10,8 @@
 
 @implementation RightSectionController
 
+-(void)loadAnswers:(NSString*)name {
+    
+}
+
 @end

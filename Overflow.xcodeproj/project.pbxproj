@@ -188,8 +188,47 @@
 		AF77432F16B5B4D40038374C /* Overflow */ = {
 			isa = PBXGroup;
 			children = (
+				AF7D713A16C859D4002B4919 /* Libraries */,
 				AFC9247516BAC21B005D5E92 /* Images */,
 				AFC9247216BAC088005D5E92 /* Protocols */,
+				AFE7695716B5D03500680BD4 /* SBSJson */,
+				AF77433B16B5B4D40038374C /* AppDelegate.h */,
+				AF77433C16B5B4D40038374C /* AppDelegate.m */,
+				AFE7698016B5D59C00680BD4 /* MenuFactory.h */,
+				AFE7698116B5D59C00680BD4 /* MenuFactory.m */,
+				AF0F7FF116B5E34400FF6165 /* MenuActions.h */,
+				AF0F7FF216B5E34400FF6165 /* MenuActions.m */,
+				AF11D67416B5C03E006F2540 /* DKTags.h */,
+				AF11D67516B5C03E006F2540 /* DKTags.m */,
+				AF7D713716C84B68002B4919 /* DKAnswers.h */,
+				AF7D713816C84B68002B4919 /* DKAnswers.m */,
+				AFC9246416BAA1BA005D5E92 /* LeftListController.h */,
+				AFC9246516BAA1BA005D5E92 /* LeftListController.m */,
+				AFD8283716BC22CA00163B0F /* RightSectionController.h */,
+				AFD8283816BC22CA00163B0F /* RightSectionController.m */,
+				AFC9246C16BAAC30005D5E92 /* DKQuestions.h */,
+				AFC9246D16BAAC30005D5E92 /* DKQuestions.m */,
+				AF77433E16B5B4D40038374C /* MainMenu.xib */,
+				AF77433016B5B4D40038374C /* Supporting Files */,
+			);
+			path = Overflow;
+			sourceTree = "<group>";
+		};
+		AF77433016B5B4D40038374C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF77433116B5B4D40038374C /* Overflow-Info.plist */,
+				AF77433216B5B4D40038374C /* InfoPlist.strings */,
+				AF77433516B5B4D40038374C /* main.m */,
+				AF77433716B5B4D40038374C /* Overflow-Prefix.pch */,
+				AF77433816B5B4D40038374C /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF7D713A16C859D4002B4919 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
 				AF1894FD16B7D58D00973DD1 /* INAppStoreWindow.h */,
 				AF1894FE16B7D58D00973DD1 /* INAppStoreWindow.m */,
 				AF18950016B7D5C400973DD1 /* INWindowButton.h */,
@@ -212,39 +251,8 @@
 				AF7D713016C8425F002B4919 /* EQSTRScrollView.m */,
 				AF7D713116C8425F002B4919 /* EQSTRClipView.h */,
 				AF7D713216C8425F002B4919 /* EQSTRClipView.m */,
-				AFE7695716B5D03500680BD4 /* SBSJson */,
-				AFE7698016B5D59C00680BD4 /* MenuFactory.h */,
-				AFE7698116B5D59C00680BD4 /* MenuFactory.m */,
-				AF77433B16B5B4D40038374C /* AppDelegate.h */,
-				AF77433C16B5B4D40038374C /* AppDelegate.m */,
-				AF0F7FF116B5E34400FF6165 /* MenuActions.h */,
-				AF0F7FF216B5E34400FF6165 /* MenuActions.m */,
-				AF11D67416B5C03E006F2540 /* DKTags.h */,
-				AF11D67516B5C03E006F2540 /* DKTags.m */,
-				AF77433E16B5B4D40038374C /* MainMenu.xib */,
-				AF7D713716C84B68002B4919 /* DKAnswers.h */,
-				AF7D713816C84B68002B4919 /* DKAnswers.m */,
-				AFC9246416BAA1BA005D5E92 /* LeftListController.h */,
-				AFC9246516BAA1BA005D5E92 /* LeftListController.m */,
-				AFD8283716BC22CA00163B0F /* RightSectionController.h */,
-				AFD8283816BC22CA00163B0F /* RightSectionController.m */,
-				AFC9246C16BAAC30005D5E92 /* DKQuestions.h */,
-				AFC9246D16BAAC30005D5E92 /* DKQuestions.m */,
-				AF77433016B5B4D40038374C /* Supporting Files */,
 			);
-			path = Overflow;
-			sourceTree = "<group>";
-		};
-		AF77433016B5B4D40038374C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AF77433116B5B4D40038374C /* Overflow-Info.plist */,
-				AF77433216B5B4D40038374C /* InfoPlist.strings */,
-				AF77433516B5B4D40038374C /* main.m */,
-				AF77433716B5B4D40038374C /* Overflow-Prefix.pch */,
-				AF77433816B5B4D40038374C /* Credits.rtf */,
-			);
-			name = "Supporting Files";
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 		AFC9247216BAC088005D5E92 /* Protocols */ = {

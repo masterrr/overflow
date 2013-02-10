@@ -7,8 +7,9 @@
 //
 
 #import "DKAnswers.h"
+#import "SBJson.h"
 
-const NSString *tagsApiUrl = @"https://api.stackexchange.com/2.1/tags?order=desc&sort=popular&site=stackoverflow";
+const NSString *answersByTagApiUrl = @"http://api.stackoverflow.com/1.1/search?tagged=";
 const NSString *answersCacheFileName = @"DKTagsCache.cache";
 
 @implementation DKAnswers
@@ -21,7 +22,19 @@ const NSString *answersCacheFileName = @"DKTagsCache.cache";
 }
 
 -(void)getAnswersByName:(NSString*)name {
-    
+    NSString *path = [answersByTagApiUrl stringByAppendingString:name];
+    NSLog(@"%@", path);
+    NSURL            *url        = [NSURL URLWithString:(NSString*)path];
+    NSURLRequest     *request    = [NSURLRequest requestWithURL:url];
+    NSURLResponse    *gresponse   = nil;
+    NSError          *gerror      = nil;
+    NSOperationQueue *queue      = [[NSOperationQueue alloc] init];
+    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){
+        __strong NSArray *arr = [data JSONValue][@"questions"];
+        if ([_delegate respondsToSelector:@selector(takeArray:)]) {
+           
+        }
+    }];
 }
 
 @end
