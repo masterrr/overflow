@@ -15,6 +15,7 @@
     sourceListItems = [[NSMutableArray alloc] init];
     _tags = [SourceListItem itemWithTitle:@"TAGS" identifier:@"tags"];
     id<DKTagsProtocol> tags = [[DKTags alloc] initWithDelegate:self];
+    _answer = [[DKAnswers alloc] initWithDelegate:self];
     [tags performLoadTags];
     [self setIsLoading:YES];
     [sourceListItems addObject:_tags];
@@ -129,7 +130,8 @@
 - (void)sourceListSelectionDidChange:(NSNotification *)notification
 {
 	NSIndexSet *selectedIndexes = [_leftlist selectedRowIndexes];
-    NSLog(@"%@",selectedIndexes);
+    NSString *tagName = [[[[sourceListItems objectAtIndex:0] children] objectAtIndex:(unsigned long)[selectedIndexes firstIndex]-1] title];
+    [_answer getAnswersByName:tagName];
 }
 
 

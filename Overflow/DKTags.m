@@ -9,7 +9,7 @@
 #import "DKTags.h"
 
 
-const NSString *tagsApiUrl = @"https://api.stackexchange.com/2.0/tags?site=stackoverflow";
+const NSString *tagsApiUrl = @"https://api.stackexchange.com/2.1/tags?order=desc&sort=popular&site=stackoverflow";
 const NSString *tagsCacheFileName = @"DKTagsCache.cache";
 
 
@@ -30,6 +30,7 @@ const NSString *tagsCacheFileName = @"DKTagsCache.cache";
 -(BOOL)cacheTagsExists {
     NSString *tempFolder = NSTemporaryDirectory();
     NSString *path = [tempFolder stringByAppendingString:(NSString*)tagsCacheFileName];
+    NSLog(@"%@", path);
     return (BOOL)[[NSFileManager defaultManager] fileExistsAtPath:path];
 }
 

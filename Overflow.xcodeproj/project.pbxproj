@@ -24,6 +24,7 @@
 		AF7D713316C84260002B4919 /* EQSTRScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7D713016C8425F002B4919 /* EQSTRScrollView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AF7D713416C84260002B4919 /* EQSTRClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7D713216C8425F002B4919 /* EQSTRClipView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AF7D713616C842B2002B4919 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7D713516C842B2002B4919 /* QuartzCore.framework */; };
+		AF7D713916C84B68002B4919 /* DKAnswers.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7D713816C84B68002B4919 /* DKAnswers.m */; };
 		AFC9246316BAA066005D5E92 /* PXSourceList.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC9246016BAA065005D5E92 /* PXSourceList.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AFC9246616BAA1BA005D5E92 /* LeftListController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC9246516BAA1BA005D5E92 /* LeftListController.m */; };
 		AFC9246916BAA42A005D5E92 /* SourceListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC9246816BAA42A005D5E92 /* SourceListItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -85,6 +86,8 @@
 		AF7D713116C8425F002B4919 /* EQSTRClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQSTRClipView.h; sourceTree = "<group>"; };
 		AF7D713216C8425F002B4919 /* EQSTRClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQSTRClipView.m; sourceTree = "<group>"; };
 		AF7D713516C842B2002B4919 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AF7D713716C84B68002B4919 /* DKAnswers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAnswers.h; sourceTree = "<group>"; };
+		AF7D713816C84B68002B4919 /* DKAnswers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAnswers.m; sourceTree = "<group>"; };
 		AFC9245F16BAA065005D5E92 /* PXSourceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSourceList.h; sourceTree = "<group>"; };
 		AFC9246016BAA065005D5E92 /* PXSourceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXSourceList.m; sourceTree = "<group>"; };
 		AFC9246116BAA065005D5E92 /* PXSourceListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSourceListDataSource.h; sourceTree = "<group>"; };
@@ -219,6 +222,8 @@
 				AF11D67416B5C03E006F2540 /* DKTags.h */,
 				AF11D67516B5C03E006F2540 /* DKTags.m */,
 				AF77433E16B5B4D40038374C /* MainMenu.xib */,
+				AF7D713716C84B68002B4919 /* DKAnswers.h */,
+				AF7D713816C84B68002B4919 /* DKAnswers.m */,
 				AFC9246416BAA1BA005D5E92 /* LeftListController.h */,
 				AFC9246516BAA1BA005D5E92 /* LeftListController.m */,
 				AFD8283716BC22CA00163B0F /* RightSectionController.h */,
@@ -394,6 +399,7 @@
 				AFD8283916BC22CA00163B0F /* RightSectionController.m in Sources */,
 				AF7D713316C84260002B4919 /* EQSTRScrollView.m in Sources */,
 				AF7D713416C84260002B4919 /* EQSTRClipView.m in Sources */,
+				AF7D713916C84B68002B4919 /* DKAnswers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,11 +11,13 @@
 #import "SourceListItem.h"
 #import "DKTags.h"
 #import "APITagsProtocol.h"
+#import "DKAnswers.h"
 
 @interface LeftListController : NSObject <PXSourceListDataSource, PXSourceListDelegate, APITagsProtocol, NSApplicationDelegate> {
     NSMutableArray *sourceListItems;
 }
 @property BOOL isLoading;
+@property (strong) DKAnswers *answer;
 @property (strong) IBOutlet NSProgressIndicator *progressLeftIndicator;
 @property (strong) IBOutlet PXSourceList *leftlist;
 @property (strong) SourceListItem *tags;
