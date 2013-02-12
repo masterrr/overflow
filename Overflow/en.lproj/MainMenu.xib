@@ -1493,6 +1493,7 @@
 							<string key="NSFrame">{{-1, -1}, {238, 20}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<string key="NSHuggingPriority">{250, 250}</string>
 							<int key="NSpiFlags">16399</int>
@@ -1517,7 +1518,7 @@
 			<object class="NSCustomObject" id="755631768">
 				<string key="NSClassName">NSFontManager</string>
 			</object>
-			<object class="NSCustomObject" id="1053248404">
+			<object class="NSCustomObject" id="548249354">
 				<string key="NSClassName">RightSectionController</string>
 			</object>
 		</array>
@@ -2247,7 +2248,7 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">whops</string>
 						<reference key="source" ref="677202765"/>
-						<reference key="destination" ref="1053248404"/>
+						<reference key="destination" ref="548249354"/>
 					</object>
 					<int key="connectionID">1104</int>
 				</object>
@@ -2809,7 +2810,7 @@
 								<float key="scoringTypeFloat">29</float>
 								<int key="contentType">3</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="933961753">
+							<object class="IBNSLayoutConstraint" id="650451563">
 								<reference key="firstItem" ref="420192030"/>
 								<int key="firstAttribute">6</int>
 								<int key="relation">0</int>
@@ -3467,12 +3468,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">1052</int>
-						<reference key="object" ref="933961753"/>
+						<reference key="object" ref="650451563"/>
 						<reference key="parent" ref="439893737"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">1102</int>
-						<reference key="object" ref="1053248404"/>
+						<reference key="object" ref="548249354"/>
 						<reference key="parent" ref="0"/>
 					</object>
 				</array>
@@ -3551,7 +3552,7 @@
 					<reference ref="515122562"/>
 					<reference ref="7941615"/>
 					<reference ref="1002923033"/>
-					<reference ref="933961753"/>
+					<reference ref="650451563"/>
 					<reference ref="1072756180"/>
 				</array>
 				<string key="372.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3668,7 +3669,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">1104</int>
+			<int key="maxID">1118</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3716,7 +3717,6 @@
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="leftlist">PXSourceList</string>
 						<string key="progressLeftIndicator">NSProgressIndicator</string>
-						<string key="whops">RightSectionController</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="leftlist">
@@ -3726,10 +3726,6 @@
 						<object class="IBToOneOutletInfo" key="progressLeftIndicator">
 							<string key="name">progressLeftIndicator</string>
 							<string key="candidateClassName">NSProgressIndicator</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="whops">
-							<string key="name">whops</string>
-							<string key="candidateClassName">RightSectionController</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
